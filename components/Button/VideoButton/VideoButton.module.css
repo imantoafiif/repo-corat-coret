@@ -1,0 +1,38 @@
+.video-button {
+  width: var(--size-14);
+  height: var(--size-14);
+  border-radius: var(--size-60);
+  background: var(--primary-P70);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-icon {
+  width: var(--size-8);
+  height: var(--size-8);
+}
+
+@media (min-width: 768px) {
+  .video-button {
+    width: 96px;
+    height: 96px;
+  }
+
+  .button-icon {
+    width: var(--size-12);
+    height: var(--size-12);
+  }
+}
+@media (min-width: 1280px) {
+  .video-button {
+    width: var(--size-32);
+    height: var(--size-32);
+  }
+
+  .button-icon {
+    width: var(--size-20);
+    height: var(--size-20);
+  }
+}

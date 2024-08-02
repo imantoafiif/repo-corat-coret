@@ -1,0 +1,234 @@
+@import "font.css";
+@import "variables.css";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  color: var(--neutral-N100);
+  font-family: "Plus Jakarta Sans", Helvetica, sans-serif;
+  background: transparent;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  white-space: pre-line;
+  contain: paint;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--primary-P30);
+  text-shadow: none;
+}
+/* Firefox */
+::-moz-selection {
+  background: var(--primary-P30);
+  text-shadow: none;
+}
+
+/* Safari */
+::-webkit-selection {
+  background: var(--primary-P30);
+  text-shadow: none;
+}
+/* ----------------------------------------------------------------
+	Basic
+-----------------------------------------------------------------*/
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+:active,
+:focus {
+  outline: none !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a img {
+  border: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ----------------------------------------------------------------
+	Typography
+-----------------------------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+/* ----------------------------------------------------------------
+	Container
+-----------------------------------------------------------------*/
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--size-6);
+}
+@media (min-width: 375px) {
+  .container {
+    max-width: 375px;
+  }
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 576px;
+    padding: 0;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 672px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 928px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* ----------------------------------------------------------------
+	 Form Input 
+-----------------------------------------------------------------*/
+input,
+textarea {
+  background: var(--neutral-N10);
+  border: 1px var(--neutral-N40) solid;
+  border-radius: var(--size-1);
+  -webkit-border-radius: var(--size-1);
+  -moz-border-radius: var(--size-1);
+  padding: var(--size-4) var(--size-3);
+  height: 37px;
+  color: var(--neutral-N100);
+  font: var(--label-l5-4);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+textarea {
+  width: 100%;
+  height: auto;
+  resize: none;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #abadb1;
+  font: var(--label-l5-5);
+}
+input:focus,
+input:not(placeholder-shown),
+textarea:focus,
+textarea:not(placeholder-shown) {
+  border-color: var(--neutral-N100);
+}
+input:placeholder-shown,
+textarea:placeholder-shown {
+  border-color: var(--neutral-N40);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px var(--neutral-N10) inset;
+}
+
+@media (min-width: 768px) {
+  input,
+  textarea {
+    height: 52px;
+  }
+}
+
+/* ----------------------------------------------------------------
+  Fix blur on Lottie animation
+-----------------------------------------------------------------*/
+
+.lottie-clear svg {
+  transform: unset !important;
+}
+
+/* ----------------------------------------------------------------
+	Page Background
+-----------------------------------------------------------------*/
+
+.home {
+  background: var(--neutral-N00);
+  position: relative;
+}
+.home.home__navy {
+  background: var(--primary-P90);
+}
+.home.home__blue {
+  background: var(--primary-P80);
+}
+.home.home__white {
+  background: var(--neutral-N00);
+}
+.contact {
+  overflow: hidden;
+}
+
+/* ----------------------------------------------------------------
+	Target Anchor for click to scroll
+-----------------------------------------------------------------*/
+
+.anchor {
+  position: absolute;
+  top: var(--size-13);
+}
+
+@media (min-width: 768px) {
+  .anchor {
+    top: var(--size-20);
+  }
+}
+@media (min-width: 1280px) {
+  .anchor {
+    top: var(--size-32);
+  }
+}

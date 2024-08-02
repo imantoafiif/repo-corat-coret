@@ -1,0 +1,56 @@
+.daktau {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--size-40, 160px);
+}
+
+.content-viewport {
+    width: 264px;
+    overflow: hidden;
+    background: none;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.content-slide {
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 100%;
+    min-width: 0;
+}
+
+.content-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.screen::-webkit-scrollbar {
+    display: none;
+}
+
+.control-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: var(--size-4, 16px);
+}
+
+.control-item {
+    width: var(--size-3, 12px);
+    height: var(--size-3, 12px);
+    background: none;
+    border: 1px solid var(--secondary-S40, #c9c751);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background .15s ease;
+}
+
+.control-item.active {
+    background: var(--secondary-S40, #c9c751);
+}

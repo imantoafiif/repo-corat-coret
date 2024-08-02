@@ -1,0 +1,5 @@
+.list-wrapper {
+    padding-top: var(--size-40, 160px);
+    padding-bottom: var(--size-40, 160px);
+    background: var(--primary-P80, #282a94);
+}

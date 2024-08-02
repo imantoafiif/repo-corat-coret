@@ -1,0 +1,16 @@
+.list-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-15, 60px);
+    color: white;
+}
+
+.list-title-wrapper > h2 {
+    font: var(--heading-h6-2);
+    text-align: center;
+}
+
+.list-title-wrapper > p {
+    font: var(--body-b2-5);
+    text-align: center;
+}

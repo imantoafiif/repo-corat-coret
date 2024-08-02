@@ -1,0 +1,503 @@
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  user-select: none;
+  white-space: nowrap;
+  border: none;
+}
+.btn-link {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  color: inherit;
+  width: fit-content;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.btn-link .btn:disabled,
+.btn-link .btn[disabled] {
+  pointer-events: none;
+}
+
+.btn-primary,
+.btn-secondary {
+  border-radius: 100px;
+  min-width: 101px;
+}
+
+.btn__large {
+  font: var(--label-l3-3);
+}
+.btn__medium {
+  font: var(--label-l4-3);
+}
+.btn__small {
+  font: var(--label-l6-2);
+  line-height: 17px;
+}
+
+.btn__arrow {
+  border-radius: var(--size-10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.btn-primary.btn__large,
+.btn-secondary.btn__large {
+  padding: var(--size-6) var(--size-10);
+  gap: var(--size-10);
+}
+.btn-link .btn-primary.btn__large,
+.btn-link .btn-secondary.btn__large {
+  gap: var(--size-10);
+}
+.btn-primary.btn__large .btn__arrow,
+.btn-secondary.btn__large .btn__arrow {
+  width: var(--size-18);
+  height: var(--size-18);
+  padding: 11px;
+}
+
+.btn-primary.btn__medium,
+.btn-secondary.btn__medium {
+  padding: var(--size-4) var(--size-6);
+  gap: var(--size-6);
+}
+.btn-link .btn-primary.btn__medium,
+.btn-link .btn-secondary.btn__medium {
+  gap: var(--size-6);
+}
+.btn-primary.btn__medium .btn__arrow,
+.btn-secondary.btn__medium .btn__arrow {
+  width: var(--size-10);
+  height: var(--size-10);
+  padding: 6px;
+}
+
+.btn__large .btn__arrow-path svg {
+  display: flex;
+  justify-content: center;
+  width: var(--size-18) !important;
+  height: 70px !important;
+  /* width: 81px !important;
+  height: 78px !important; */
+  transform: none !important;
+}
+/* .btn__large .btn__arrow-path svg {
+  width: var(--size-18) !important;
+  height: var(--size-18) !important;
+} */
+
+.btn-primary.btn__small,
+.btn-secondary.btn__small {
+  padding: var(--size-2) var(--size-3);
+  gap: var(--size-2);
+}
+.btn-link .btn-primary.btn__small,
+.btn-link .btn-secondary.btn__small {
+  gap: var(--size-2);
+}
+.btn-primary.btn__small .btn__arrow,
+.btn-secondary.btn__small .btn__arrow {
+  width: var(--size-7);
+  height: var(--size-7);
+  padding: 4px;
+}
+
+/* Button Primary State */
+.btn-primary.btn__dark {
+  color: var(--neutral-N00);
+  background: var(--neutral-N90);
+}
+.btn-primary.btn__dark .btn__arrow {
+  background: var(--neutral-N70);
+}
+.btn-primary.btn__dark .btn__arrow-path {
+  fill: var(--neutral-N15);
+}
+.btn-primary.btn__dark:hover {
+  background: var(--neutral-N70);
+}
+.btn-primary.btn__dark:active {
+  color: var(--neutral-N100);
+  background: var(--neutral-N20);
+}
+.btn-primary.btn__dark:disabled,
+.btn-primary.btn__dark[disabled] {
+  color: var(--neutral-N20) !important;
+  background: var(--neutral-N30) !important;
+}
+.btn-primary.btn__dark:hover .btn__arrow {
+  background: var(--neutral-N50);
+}
+.btn-primary.btn__dark:active .btn__arrow {
+  background: var(--neutral-N15);
+}
+.btn-primary.btn__dark:disabled .btn__arrow,
+.btn-primary.btn__dark[disabled] .btn__arrow {
+  background: var(--neutral-N40);
+}
+.btn-primary.btn__dark:active .btn__arrow-path {
+  fill: var(--neutral-N80);
+}
+.btn-primary.btn__dark:disabled .btn__arrow-path,
+.btn-primary.btn__dark[disabled] .btn__arrow-path {
+  fill: var(--neutral-N20);
+}
+
+.btn-primary.btn__light {
+  color: var(--neutral-N100);
+  background: var(--neutral-N00);
+}
+.btn-primary.btn__light .btn__arrow {
+  background: var(--neutral-N15);
+}
+.btn-primary.btn__light .btn__arrow-path {
+  fill: var(--neutral-N80);
+}
+.btn-primary.btn__light:hover {
+  background: var(--neutral-N20);
+}
+.btn-primary.btn__light:active {
+  color: var(--neutral-N00);
+  background: var(--neutral-N70);
+}
+.btn-primary.btn__light:disabled,
+.btn-primary.btn__light[disabled] {
+  color: var(--neutral-N20) !important;
+  background: var(--neutral-N30) !important;
+}
+.btn-primary.btn__light:hover .btn__arrow {
+  background: var(--neutral-N15);
+}
+.btn-primary.btn__light:active .btn__arrow {
+  background: var(--neutral-N40);
+}
+.btn-primary.btn__light:disabled .btn__arrow,
+.btn-primary.btn__dark[disabled] .btn__arrow {
+  background: var(--neutral-N40);
+}
+.btn-primary.btn__light:active .btn__arrow-path {
+  fill: var(--neutral-N00);
+}
+.btn-primary.btn__light:disabled .btn__arrow-path,
+.btn-primary.btn__light[disabled] .btn__arrow-path {
+  fill: var(--neutral-N20);
+}
+
+/* Button Secondary State */
+.btn-secondary.btn__dark {
+  color: var(--neutral-N100);
+  border: 2px solid var(--neutral-N90);
+  background: transparent;
+}
+.btn-secondary.btn__dark .btn__arrow {
+  border: 2px solid var(--neutral-N70);
+}
+.btn-secondary.btn__dark .btn__arrow-path {
+  fill: var(--neutral-N80);
+}
+.btn-secondary.btn__dark:hover {
+  border: 2px solid var(--neutral-N70);
+  background: var(--neutral-N15);
+}
+.btn-secondary.btn__dark:active {
+  border: 2px solid var(--neutral-N70);
+  background: var(--neutral-N20);
+}
+.btn-secondary.btn__dark:disabled,
+.btn-secondary.btn__dark[disabled] {
+  color: var(--neutral-N20) !important;
+  border: 2px solid var(--neutral-N30) !important;
+}
+.btn-secondary.btn__dark:hover .btn__arrow {
+  border: none;
+  background: var(--neutral-N20);
+}
+.btn-secondary.btn__dark:active .btn__arrow {
+  border: none;
+  background: var(--neutral-N15);
+}
+.btn-secondary.btn__dark:disabled .btn__arrow,
+.btn-secondary.btn__dark[disabled] .btn__arrow {
+  border: 1px solid var(--neutral-N30) !important;
+}
+.btn-secondary.btn__dark:hover .btn__arrow-path {
+  fill: var(--neutral-N80);
+}
+.btn-secondary.btn__dark:active .btn__arrow-path {
+  fill: var(--neutral-N80);
+}
+.btn-secondary.btn__dark:disabled .btn__arrow-path,
+.btn-secondary.btn__dark[disabled] .btn__arrow-path {
+  fill: var(--neutral-N20) !important;
+}
+
+.btn-secondary.btn__light {
+  color: var(--neutral-N00);
+  border: 2px solid var(--neutral-N00);
+  background: transparent;
+}
+.btn-secondary.btn__light .btn__arrow {
+  border: 1px solid var(--neutral-N15);
+}
+.btn-secondary.btn__light .btn__arrow-path {
+  fill: var(--neutral-N15);
+}
+.btn-secondary.btn__light:hover {
+  border: 2px solid var(--neutral-N00);
+  background: var(--neutral-N80);
+}
+.btn-secondary.btn__light:active {
+  border: 2px solid var(--neutral-N00);
+  background: var(--neutral-N70);
+}
+.btn-secondary.btn__light:disabled,
+.btn-secondary.btn__light[disabled] {
+  color: var(--neutral-N40) !important;
+  border: 2px solid var(--neutral-N50) !important;
+}
+.btn-secondary.btn__light:hover .btn__arrow {
+  border: none;
+  background: var(--neutral-N70);
+}
+.btn-secondary.btn__light:active .btn__arrow {
+  border: none;
+  background: var(--neutral-N80);
+}
+.btn-secondary.btn__light:disabled .btn__arrow,
+.btn-secondary.btn__dark[disabled] .btn__arrow {
+  border: 1px solid var(--neutral-N50) !important;
+}
+
+.btn-secondary.btn__light:disabled .btn__arrow-path,
+.btn-secondary.btn__light[disabled] .btn__arrow-path {
+  fill: var(--neutral-N40) !important;
+}
+
+.btn-tertiary {
+  border-radius: 0;
+  padding: 0 0 var(--size-0-5);
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  gap: var(--size-2);
+}
+.btn-tertiary.btn__default {
+  font: var(--label-l5-3);
+}
+.btn-tertiary.btn__small {
+  font: var(--label-l5-3);
+}
+
+.btn-link .btn-tertiary {
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--size-2);
+}
+
+.btn-tertiary .btn__arrow {
+  border: none;
+  border-radius: 0;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.btn-tertiary.btn__small .btn__arrow {
+  width: var(--size-5);
+  height: var(--size-5);
+}
+.btn-tertiary .btn__arrow svg {
+  width: 100%;
+  height: 100%;
+}
+.btn-tertiary.btn__purple {
+  color: var(--primary-P50);
+  transition: 0.2s color linear;
+}
+
+.btn-tertiary.btn__purple a {
+  pointer-events: none;
+}
+
+.btn-tertiary.btn__purple .btn__arrow-path {
+  fill: var(--primary-P50);
+  transition: 0.2s fill linear;
+}
+
+.btn-tertiary.btn__dark:after,
+.btn-tertiary.btn__light:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 0;
+  height: 1.5px;
+  transition: width 0.3s;
+}
+
+.btn-tertiary.btn__dark:disabled:after,
+.btn-tertiary.btn__light[disabled]:after {
+  display: none;
+}
+
+.btn-tertiary.btn__dark {
+  color: var(--neutral-N100);
+}
+.btn-tertiary.btn__dark:active {
+  color: var(--neutral-N70);
+}
+
+.btn-tertiary.btn__dark:hover:after {
+  width: 100%;
+  background: var(--neutral-N100);
+}
+.btn-tertiary.btn__dark:active:after {
+  width: 100%;
+  background: var(--neutral-N70);
+}
+.btn-tertiary:disabled,
+.btn-tertiary[disabled] {
+  color: var(--neutral-N40) !important;
+}
+
+.btn-tertiary.btn__dark .btn__arrow-path {
+  fill: var(--neutral-N50);
+}
+.btn-tertiary.btn__dark:hover .btn__arrow-path {
+  fill: var(--neutral-N70);
+}
+.btn-tertiary.btn__dark:active .btn__arrow-path {
+  fill: var(--neutral-N50);
+}
+
+.btn-tertiary:disabled .btn__arrow-path,
+.btn-tertiary[disabled] .btn__arrow-path {
+  fill: var(--neutral-N40) !important;
+}
+
+.btn-tertiary.btn__light {
+  color: var(--neutral-N00);
+}
+.btn-tertiary.btn__light:active {
+  color: var(--neutral-N00);
+}
+
+.btn-tertiary.btn__light:hover:after {
+  width: 100%;
+  background: var(--neutral-N00);
+}
+.btn-tertiary.btn__light:active:after {
+  width: 100%;
+  background: var(--neutral-N00);
+}
+
+.btn-tertiary.btn__light .btn__arrow-path {
+  fill: var(--neutral-N15);
+}
+.btn-tertiary.btn__light:hover .btn__arrow-path {
+  fill: var(--neutral-N15);
+}
+.btn-tertiary.btn__light:active .btn__arrow-path {
+  fill: var(--neutral-N00);
+}
+
+.btn__default {
+  font: var(--label-l6-2);
+  line-height: 17px;
+}
+
+.btn-primary.btn__default,
+.btn-secondary.btn__default {
+  padding: var(--size-2) var(--size-3);
+  gap: var(--size-2);
+}
+.btn-link .btn-primary.btn__default,
+.btn-link .btn-secondary.btn__default {
+  gap: var(--size-2);
+}
+.btn-primary.btn__default .btn__arrow,
+.btn-secondary.btn__default .btn__arrow {
+  width: var(--size-7);
+  height: var(--size-7);
+  padding: 4px;
+}
+
+@media (min-width: 768px) {
+  .btn__default {
+    font: var(--label-l4-3);
+  }
+
+  .btn-primary.btn__default,
+  .btn-secondary.btn__default {
+    padding: var(--size-4) var(--size-6);
+    gap: var(--size-6);
+  }
+  .btn-link .btn-primary.btn__default,
+  .btn-link .btn-secondary.btn__default {
+    gap: var(--size-6);
+  }
+  .btn-primary.btn__default .btn__arrow,
+  .btn-secondary.btn__default .btn__arrow {
+    width: var(--size-10);
+    height: var(--size-10);
+    padding: 6px;
+  }
+  .btn-tertiary.btn__default {
+    font: var(--label-l4-3);
+  }
+
+  .btn-tertiary .btn__arrow {
+    width: 28px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* .btn__default {
+    font: var(--label-l3-3);
+  }
+
+  .btn-primary.btn__default,
+  .btn-secondary.btn__default {
+    padding: var(--size-6) var(--size-10);
+    gap: var(--size-10);
+  }
+  .btn-link .btn-primary.btn__default,
+  .btn-link .btn-secondary.btn__default {
+    gap: var(--size-10);
+  }
+  .btn-primary.btn__default .btn__arrow,
+  .btn-secondary.btn__default .btn__arrow {
+    width: var(--size-18);
+    height: var(--size-18);
+    padding: 11px;
+  } */
+
+  .btn-tertiary.btn__default {
+    font: var(--label-l3-3);
+  }
+
+  .btn-tertiary .btn__arrow {
+    width: 36px;
+    height: 36px;
+  }
+  .btn-tertiary.btn__medium .btn__arrow {
+    width: 30px;
+    height: 22px;
+  }
+  .btn-tertiary .btn__arrow svg {
+    width: 128%;
+    height: 124%;
+    overflow: visible;
+  }
+}

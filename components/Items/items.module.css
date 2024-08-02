@@ -1,0 +1,24 @@
+.list-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-4, 16px);
+    padding-top: var(--size-8, 32px);
+    padding-bottom: var(--size-8, 32px);
+}
+
+.item-wrapper:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.item-wrapper > h3 {
+    font: var(--heading-h11-2);
+}
+
+.item-wrapper > p {
+    font: var(--body-b4-5);
+}

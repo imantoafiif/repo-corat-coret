@@ -1,0 +1,11 @@
+.blue {
+    background: var(--primary-P80, #282A94);
+}
+
+.dark {
+    background: var(--neutral-N90, #2a2e34);
+}
+
+.light {
+    background: var(--neutral-N10, #fbfafa);
+}
