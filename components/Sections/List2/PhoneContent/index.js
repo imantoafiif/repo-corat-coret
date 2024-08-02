@@ -47,9 +47,10 @@ const PhoneContent = () => {
         setAutoplayTimeout(autoplayResumeTimeout);
     }
 
-    // useEffect(() => {
-    //     emblaApi.on('select', () => {});
-    // }, [emblaApi])
+    useEffect(() => {
+        if(!emblaApi) return
+        emblaApi.on('select', () => setCurrentScreen(emblaApi.selectedScrollSnap()));
+    }, [emblaApi])
 
     return (
         <div className={classes.daktau}>
