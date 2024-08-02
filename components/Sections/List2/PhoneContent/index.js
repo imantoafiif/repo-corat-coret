@@ -16,7 +16,7 @@ const PhoneContent = () => {
             },
         },
     }, [Autoplay({
-        delay: 4000,
+        delay: 5000,
         stopOnInteraction: false, 
         stopOnMouseEnter: false, 
         rootNode: (emblaRoot) => emblaRoot.parentElement,
