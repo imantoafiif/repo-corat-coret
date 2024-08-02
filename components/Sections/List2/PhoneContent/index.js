@@ -4,11 +4,15 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import classes from './PhoneContent.module.css';
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 const PhoneContent = () => {
+    const [autoplayTimeout, setAutoplayTimeout] = useState(null);
+    const [currentScreen, setCurrentScreen] = useState(0);
+    
     const [emblaRef, emblaApi] = useEmblaCarousel({
         loop: true,
-        duration: 40,
+        duration: 20,
         watchDrag: true,
         breakpoints: {
             "(min-width: 128px)": {
@@ -21,6 +25,31 @@ const PhoneContent = () => {
         stopOnMouseEnter: false, 
         rootNode: (emblaRoot) => emblaRoot.parentElement,
     })]);
+
+    const onButtonClick = (emblaApi, page) => {
+        if(!emblaApi) return
+        const autoPlay = emblaApi?.plugins()?.autoplay;
+
+        if(!autoPlay) return
+
+        autoPlay.stop();
+        emblaApi.scrollTo(page);
+        setCurrentScreen(page);
+        
+        if(autoplayTimeout) {
+            clearTimeout(autoplayTimeout);
+        }
+
+        const autoplayResumeTimeout = setTimeout(() => {
+            autoPlay.play();
+            emblaApi.scrollNext();
+        }, 5000);
+        setAutoplayTimeout(autoplayResumeTimeout);
+    }
+
+    // useEffect(() => {
+    //     emblaApi.on('select', () => {});
+    // }, [emblaApi])
 
     return (
         <div className={classes.daktau}>
@@ -56,10 +85,15 @@ const PhoneContent = () => {
                 </div>
             </div>
             <div className={classes['control-wrapper']}>
-                <div className={`${classes['control-item']} ${classes['active']}`}></div>
-                <div className={classes['control-item']}></div>
-                <div className={classes['control-item']}></div>
-                <div className={classes['control-item']}></div>
+                {
+                    [0, 1, 2].map((_, index) => (
+                        <div 
+                            key={index}
+                            onClick={() => onButtonClick(emblaApi, index)} 
+                            className={`${classes['control-item']} ${currentScreen == index ? classes['active'] : null}`}>
+                        </div>
+                    ))
+                }
             </div>
         </div>
         
