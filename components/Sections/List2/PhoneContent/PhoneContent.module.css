@@ -1,4 +1,4 @@
-.daktau {
+.content-wrapper {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -23,6 +23,7 @@
     flex-direction: row;
     flex: 0 0 100%;
     min-width: 0;
+    position: relative;
 }
 
 .content-slide img {
