@@ -10,7 +10,7 @@ import MM from '../../../../public/images/list/MM.svg';
 
 const PhoneContent = () => {
     const screens = [EWM, WM, MM];
-    const interval = 1000;
+    const interval = 5000;
     const { onButtonClick, currentScreen, emblaRef } = useCarouselControl(interval);
 
     return (
@@ -46,7 +46,6 @@ const PhoneContent = () => {
                 }
             </div>
         </div>
-        
     )
 }
 
