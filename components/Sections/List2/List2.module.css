@@ -3,3 +3,12 @@
     padding-bottom: var(--size-40, 160px);
     background: var(--primary-P80, #282a94);
 }
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 126px;
+    margin-top: var(--size-40, 160px);
+}

@@ -1,0 +1,28 @@
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+}
+
+.listitem-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: var(--size-4, 16px);
+    margin: var(--size-6, 24px) 0;
+}
+
+.item-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-3, 12px);
+    color: var(--neutral-N00, #fff);
+    max-width: 540px;
+}
+
+.item-wrapper > h3 {
+    font: var(--heading-h11-2);
+}
+
+.item-wrapper > p {
+    font: var(--heading-h12-5);
+}

@@ -1,0 +1,31 @@
+.deco-wrapper {
+    width: var(--size-22, 88px);
+    height: var(--size-22, 88px);
+    border-radius: var(--size-3, 12px);
+    background: var(--secondary-S30, #eae63b);
+    position: relative;
+}
+
+.deco-wrapper[data-static=true] {
+    background: var(--primary-P30, #bbbdf3);
+}
+
+.deco-content {
+    opacity: 1;
+    transition: all .4s ease;
+}
+
+.deco-content > p,
+.deco-content > svg {
+    width: fit-content;
+    font: var(--heading-h11-2);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.deco-content[data-active=false] {
+    opacity: 0;
+}
