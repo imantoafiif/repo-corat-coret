@@ -55,3 +55,10 @@
 .control-item.active {
     background: var(--secondary-S40, #c9c751);
 }
+
+.chasis-wrapper {
+    position: relative;
+    width: 333px;
+    height: 661.347px;
+    flex-shrink: 0;
+}

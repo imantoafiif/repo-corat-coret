@@ -1,6 +1,6 @@
 import classes from './List2.module.css';
 import ListTitle from './ListTitle';
-import PhoneContent from './PhoneContent';
+import PhoneContent from './MobileContent';
 
 const List2 = () => {
     return (
