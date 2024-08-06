@@ -1,0 +1,31 @@
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 756px;
+    position: relative;
+}
+
+.card-1 {
+    margin-top: 34px;
+}
+
+.card-2 {
+    margin-top: 154px;
+}
+
+.card-3 {
+    margin-top: 274px;
+}
+
+.arrow-top {
+    position: absolute;
+    right: 160px;
+    top: 0px;
+}
+
+.arrow-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 180px;
+}

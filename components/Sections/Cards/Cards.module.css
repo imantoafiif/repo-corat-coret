@@ -1,0 +1,17 @@
+.wrapper {
+    padding-top: var(--size-40, 160px);
+    padding-bottom: var(--size-40, 160px);
+    background: var(--primary-P80, #282a94);
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-40, 160px);
+}
+
+.card-title-wrapper {
+    font: var(--heading-h6-2);
+    text-align: center;
+    color: var(--neutral-N00, #fff);
+}

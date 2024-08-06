@@ -35,7 +35,7 @@ const MobileContent = () => {
                 <Content emblaRef={emblaRef} contents={contents.map(item => item.screen)} />
                 {
                     ['active', 'passive'].map((item, index) => (
-                        <div className={`${classes['decorator']} ${classes[`decorator-${item}`]}`}>
+                        <div key={index} className={`${classes['decorator']} ${classes[`decorator-${item}`]}`}>
                             <Decorator isStatic={item === 'passive'} dynamicContents={contents.map(item => item.decorator)} currentScreen={currentScreen} />
                         </div>
                     ))
