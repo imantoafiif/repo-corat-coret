@@ -1,10 +1,26 @@
+"use client";
+
 import Card from "@/components/Card";
 import classes from './Content.module.css';
 import Arrow from "@/components/Arrow";
+import { useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const Content = () => {
+    const ref = useRef(null);
+    const inView = useInView(ref, {
+        once: true,
+        amount: 1,
+    });
+
+    useEffect(() => {
+        console.log("inview", inView)
+    }, [inView])
+
     return (
-        <div className={classes['content-wrapper']}>
+        <div
+            ref={ref} 
+            className={classes['content-wrapper']}>
             <ArrowWrapper type={'top'} delay={0.5} />
             <CardWrapper order={1} />
             <CardWrapper order={2}/>
